@@ -13,8 +13,9 @@ export const getFilteredTrips = ({trips, filters}) => {
 
   // TODO - filter by duration
   if(filters.duration){
+    console.log(filters, trips);
     const pattern = new RegExp(filters.duration, 'i');
-    output = output.filter(trip => pattern.test(trip.name));
+    output = output.filter(trip => pattern.test(trip.days));
   }
 
   // TODO - filter by tags
