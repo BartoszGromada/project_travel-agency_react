@@ -33,7 +33,10 @@ export default function reducer(statePart = [], action = {}) {
     case CHANGE_DURATION:
       return {
         ...statePart,
-        duration: action.payload,
+        duration: {
+          ...statePart.duration,
+          [action.payload.type]: parseInt(action.payload.value),
+        },
       };
     case CHANGE_TAGS:
       return {
