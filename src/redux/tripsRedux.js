@@ -1,33 +1,46 @@
 /* SELECTORS */
 
 export const getAllTrips = ({trips}) => trips;
-console.log(getAllTrips);
+//console.log(getAllTrips);
 
 export const getFilteredTrips = ({trips, filters}) => {
   let output = trips;
-  console.log(output);
 
   // filter by search phrase
   if(filters.searchPhrase) {
+    console.log('filters.searchPhras: ',filters.searchPhras);
     const pattern = new RegExp(filters.searchPhrase, 'i');
+    console.log('pattern: ',pattern);
     output = output.filter(trip => pattern.test(trip.name));
+    console.log('output: ',output);
   }
 
   // TODO - filter by duration
   if(filters.duration) {
-    output = trips.filter(trip => trip.days >= filters.duration.from && trip.days <= filters.duration.to);
+    output = output.filter(trip => trip.days >= filters.duration.from && trip.days <= filters.duration.to);
   }
 
   // TODO - filter by tags
   if (filters.tags) {
-    console.log('filters.tags: ', filters.tags);
-    const pattern = new RegExp(filters.tags, 'i');
-    console.log('pattern: ', pattern);
-    output = output.filter(trip => pattern.test(trip.tags));
-    console.log('output: ',output);
+    
+    filters.tags.forEach(tag => {
+      console.log('tag: ', tag);
+      output = output.filter(trip => trip.tags.find(tripTag => tripTag === tag));
+    });
   }
 
   // TODO - sort by cost descending (most expensive goes first)
+  
+  const compareFunction = (x, y) => {
+    const replaceX = x.cost.replace('$','');
+    const replaceY = y.cost.replace('$','');
+    if (parseInt(replaceX) > parseInt(replaceY)) return -1;
+    if (parseInt(replaceX) < parseInt(replaceY)) return 1;
+    else return 0;
+  };
+  console.log('outputBefore: ', output);
+  output = output.sort(compareFunction);
+  console.log('outputAfter: ', output);
 
   return output;
 };
