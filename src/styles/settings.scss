@@ -12,6 +12,17 @@ $radius: 5px;
 $base-size: 12px;
 $transition: all 0.5s;
 
+
+@keyframes slidein {
+  from {
+    margin-top: 200px;
+  }
+
+  to {
+    margin-top: 0;
+  }
+}
+
 @mixin p-el($element) {
   &:#{$element}, &::#{$element} {
     position: absolute;

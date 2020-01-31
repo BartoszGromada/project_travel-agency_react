@@ -17,6 +17,7 @@ import TripContainer from './components/views/Trip/TripContainer';
 
 import parseTrips from './utils/parseTrips';
 import {setMultipleStates} from './redux/globalRedux';
+import styles from './styles/global.scss';
 
 class App extends React.Component {
   static propTypes = {
@@ -45,6 +46,7 @@ class App extends React.Component {
             atEnter={{ opacity: 0 }}
             atLeave={{ opacity: 0 }}
             atActive={{ opacity: 1 }}
+            className={styles.switchWrapper}
           >
             <Route exact path='/' component={Home} />
             <Route exact path='/trips' component={Trips} />
