@@ -4,12 +4,12 @@ import {calculateTotal} from '../../../utils/calculateTotal';
 import {formatPrice} from '../../../utils/formatPrice';
 import PropTypes from 'prop-types';
 
-const OrderSummary = ({cost, options}) => (
-  <h2 className={styles.component}>Total:<strong>{calculateTotal(formatPrice(cost),options)}</strong></h2>
+const OrderSummary = ({tripCost, options}) => (
+  <h2 className={styles.component}>Total:<strong>{calculateTotal(formatPrice(parseInt(tripCost)), options)}</strong></h2>
 );
 
 OrderSummary.propTypes = {
-  cost: PropTypes.number,
+  tripCost: PropTypes.number,
   options: PropTypes.object,
 };
 
