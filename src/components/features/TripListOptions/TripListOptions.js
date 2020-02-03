@@ -14,6 +14,14 @@ class TripListOptions extends React.Component {
     }
   }
 
+  handleRegions(region, checked) {
+    if(checked) {
+      this.props.addRegion(region);
+    } else {
+      this.props.removeRegion(region);
+    }
+  }
+
   handleDuration(type, value) {
     this.props.changeDuration({type, value});
   }
@@ -23,7 +31,7 @@ class TripListOptions extends React.Component {
   }
 
   render() {
-    const {tags, filters} = this.props;
+    const {tags, regions, filters} = this.props;
     return (
       <div className={styles.component}>
         <Row around="lg">
@@ -66,6 +74,12 @@ class TripListOptions extends React.Component {
               <details>
                 <summary className={styles.toggle}>Filter by Regions</summary>
                 <div className={styles.dropdown}>
+                  {Object.keys(regions).map(region => (
+                    <label key={region} className={styles.option}>
+                      <input type='checkbox' checked={filters.regions.indexOf(region) > -1} onChange={event => this.handleRegions(region, event.currentTarget.checked)}/>
+                      {region}
+                    </label>
+                  ))}
                 </div>
               </details>
             </div>
@@ -84,6 +98,8 @@ TripListOptions.propTypes = {
   changeDuration: PropTypes.func,
   addTag: PropTypes.func,
   removeTag: PropTypes.func,
+  addRegion: PropTypes.func,
+  removeRegion: PropTypes.func,
 };
 
 export default TripListOptions;

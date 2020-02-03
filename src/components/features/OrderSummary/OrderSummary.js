@@ -6,10 +6,11 @@ import PropTypes from 'prop-types';
 
 const OrderSummary = ({tripCost, options}) => (
   <h2 className={styles.component}>Total:<strong>{formatPrice(calculateTotal(tripCost, options))}</strong></h2>
+  
 );
 
 OrderSummary.propTypes = {
-  tripCost: PropTypes.number,
+  tripCost: PropTypes.string,
   options: PropTypes.object,
 };
 

@@ -25,7 +25,7 @@ class OrderForm extends React.Component {
 
 OrderForm.propTypes = {
   options: PropTypes.object,
-  tripCost: PropTypes.number,
+  tripCost: PropTypes.string,
   setOrderOption: PropTypes.func,
 };
 
