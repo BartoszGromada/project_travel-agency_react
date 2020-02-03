@@ -46,7 +46,7 @@ class TripListOptions extends React.Component {
               </label>
             </div>
           </Col>
-          <Col lg={4}>
+          <Col lg={2}>
             <div className={styles.filter}>
               <details>
                 <summary className={styles.toggle}>Filter by tags</summary>
@@ -61,6 +61,15 @@ class TripListOptions extends React.Component {
               </details>
             </div>
           </Col>
+          <Col lg={2}>
+            <div className={styles.filter}>
+              <details>
+                <summary className={styles.toggle}>Filter by Regions</summary>
+                <div className={styles.dropdown}>
+                </div>
+              </details>
+            </div>
+          </Col>
         </Row>
       </div>
     );
@@ -69,6 +78,7 @@ class TripListOptions extends React.Component {
 
 TripListOptions.propTypes = {
   tags: PropTypes.object,
+  regions: PropTypes.object,
   filters: PropTypes.object,
   changeSearchPhrase: PropTypes.func,
   changeDuration: PropTypes.func,

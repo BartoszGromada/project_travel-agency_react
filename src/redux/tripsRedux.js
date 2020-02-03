@@ -24,6 +24,14 @@ export const getFilteredTrips = ({trips, filters}) => {
     });
   }
 
+  // TODO - filter by regions
+  if (filters.regions) { ///???///
+    
+    filters.regions.forEach(region => {
+      output = output.filter(trip => trip.tags.find(tripTag => tripTag === region));
+    });
+  }
+
   // TODO - sort by cost descending (most expensive goes first)
   
   const compareFunction = (x, y) => {
