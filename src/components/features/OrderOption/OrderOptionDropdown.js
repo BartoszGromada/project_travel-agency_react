@@ -18,11 +18,12 @@ const OrderOptionDropdown = ({values, required, currentValue, setOptionValue}) =
   </select>
 );
 
-OrderOptionDropdown.PropTypes = {
+OrderOptionDropdown.propTypes = {
   values: PropTypes.array,
-  required: PropTypes.string,
-  currentValue: PropTypes.string,
-  setOptionValue: PropTypes.string,
+  required: PropTypes.node,
+  currentValue: PropTypes.array,
+  setOptionValue: PropTypes.func,
 };
+
 
 export default OrderOptionDropdown;
