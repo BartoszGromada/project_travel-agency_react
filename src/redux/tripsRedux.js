@@ -25,11 +25,20 @@ export const getFilteredTrips = ({trips, filters}) => {
   }
 
   // TODO - filter by regions
-  if (filters.regions) { ///???///
+  if (filters.regions) {
+
+    //const allCountries = countries.alpha3code;
+    //console.log('allCountries: ',allCountries);
+
+
+
+    //filters.regions.forEach(region => {
+    //output = trips.filter(trip => region[filters.region].includes(trip.countryCode));
+    //console.log('output: ',output);
     
-    filters.regions.forEach(region => {
-      output = output.filter(trip => trip.tags.find(tripTag => tripTag === region));
-    });
+    //filters.regions.forEach(region => {
+    //  output = output.filter(trip => trip.country.code.find(tripRegion => tripRegion === region));
+    //});
   }
 
   // TODO - sort by cost descending (most expensive goes first)

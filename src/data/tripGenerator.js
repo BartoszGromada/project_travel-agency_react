@@ -223,7 +223,7 @@ use the code below at: https://next.json-generator.com
           // {'code': 'KOR', 'name': 'Korea (Republic of)'},
           // {'code': 'SSD', 'name': 'South Sudan'},
           {'code': 'ESP', 'name': 'Spain'},
-          // {'code': 'LKA', 'name': 'Sri Lanka'},
+          {'code': 'LKA', 'name': 'Sri Lanka'},
           // {'code': 'SDN', 'name': 'Sudan'},
           // {'code': 'SUR', 'name': 'Suriname'},
           // {'code': 'SJM', 'name': 'Svalbard and Jan Mayen'},
