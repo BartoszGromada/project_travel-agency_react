@@ -40,6 +40,5 @@ describe('Component TripSummary', () => {
   it('should render tags without crashing', () => {
     const component = shallow(<TripSummary tags={[]} />);
     expect(component.find('.tags').exists()).toEqual(true);
-    console.log(component.debug());
   });
 });
