@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './OrderOption.scss';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import OrderOptionDropdown from './OrderOptionDropdown';
 import OrderOptionIcons from './OrderOptionIcons';
 import OrderOptionCheckboxes from './OrderOptionCheckboxes';
@@ -34,11 +34,11 @@ const OrderOption = ({name, type, id, setOrderOption, ...otherProps}) => {
   }
 };
 
-OrderOption.PropTypes = {
-  name: PropTypes.string,
-  type: PropTypes.object,
-  id: PropTypes.string,
-  setOrderOption: PropTypes.func,
+OrderOption.propTypes = {
+  name: propTypes.string,
+  type: propTypes.object,
+  id: propTypes.string,
+  setOrderOption: propTypes.func,
 };
 
 export default OrderOption;

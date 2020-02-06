@@ -17,7 +17,6 @@ const mapDispatchToProps = dispatch => ({
   removeTag: tag => dispatch(removeTag(tag)),
   addRegion: region => dispatch(addRegion(region)),
   removeRegion: region => dispatch(removeRegion(region)),
-  // TODO - add more dispatchers for other filters
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TripListOptions);

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import Icon from '../Icon/Icon';
 import styles from './ListItem.scss';
@@ -13,8 +13,8 @@ function ListItem(props) {
 }
 
 ListItem.propTypes = {
-  icon: PropTypes.string,
-  title: PropTypes.string,
+  icon: propTypes.string,
+  title: propTypes.string,
 };
 
 export default ListItem;

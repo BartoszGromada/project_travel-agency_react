@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 import TripSummary from '../../features/TripSummary/TripSummary';
 import Section from '../../layout/Section/Section';
@@ -29,7 +29,7 @@ const Trips = ({trips}) => (
 );
 
 Trips.propTypes = {
-  trips: PropTypes.arrayOf(PropTypes.object),
+  trips: propTypes.arrayOf(propTypes.object),
 };
 
 export default Trips;

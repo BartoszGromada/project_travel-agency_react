@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import styles from './CountrySummary.scss';
 import SideImage from '../../common/SideImage/SideImage';
@@ -45,14 +45,14 @@ const CountrySummary = ({alpha3Code, name, flag, trips, region, subregion, langu
 );
 
 CountrySummary.propTypes = {
-  alpha3Code: PropTypes.string,
-  name: PropTypes.string,
-  flag: PropTypes.string,
-  trips: PropTypes.array,
-  region: PropTypes.string,
-  subregion: PropTypes.string,
-  languages: PropTypes.arrayOf(PropTypes.object),
-  capital: PropTypes.string,
+  alpha3Code: propTypes.string,
+  name: propTypes.string,
+  flag: propTypes.string,
+  trips: propTypes.array,
+  region: propTypes.string,
+  subregion: propTypes.string,
+  languages: propTypes.arrayOf(propTypes.object),
+  capital: propTypes.string,
 };
 
 export default CountrySummary;

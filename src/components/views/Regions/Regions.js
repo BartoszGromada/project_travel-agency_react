@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import Section from '../../layout/Section/Section';
 import PageTitle from '../../common/PageTitle/PageTitle';
 import CountrySummary from '../../features/CountrySummary/CountrySummary';
@@ -33,9 +33,9 @@ const Regions = ({regions, subregions, countries}) => (
 );
 
 Regions.propTypes = {
-  regions: PropTypes.objectOf(PropTypes.object),
-  subregions: PropTypes.objectOf(PropTypes.object),
-  countries: PropTypes.objectOf(PropTypes.object),
+  regions: propTypes.objectOf(propTypes.object),
+  subregions: propTypes.objectOf(propTypes.object),
+  countries: propTypes.objectOf(propTypes.object),
 };
 
 export default Regions;

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styles from './OrderOption.scss';
 import {formatPrice} from '../../../utils/formatPrice';
 
@@ -19,10 +19,10 @@ const OrderOptionDropdown = ({values, required, currentValue, setOptionValue}) =
 );
 
 OrderOptionDropdown.propTypes = {
-  values: PropTypes.array,
-  required: PropTypes.node,
-  currentValue: PropTypes.array,
-  setOptionValue: PropTypes.func,
+  values: propTypes.array,
+  required: propTypes.node,
+  currentValue: propTypes.array,
+  setOptionValue: propTypes.func,
 };
 
 

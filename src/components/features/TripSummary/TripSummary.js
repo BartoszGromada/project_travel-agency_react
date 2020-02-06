@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import styles from './TripSummary.scss';
 import {Col} from 'react-flexbox-grid';
@@ -25,13 +25,13 @@ const TripSummary = ({id, image, name, cost, days, tags}) => (
 );
 
 TripSummary.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  image: PropTypes.string,
-  name: PropTypes.string,
-  intro: PropTypes.string,
-  cost: PropTypes.string,
-  days: PropTypes.number,
-  tags: PropTypes.array,
+  id: propTypes.oneOfType([propTypes.string, propTypes.number]),
+  image: propTypes.string,
+  name: propTypes.string,
+  intro: propTypes.string,
+  cost: propTypes.string,
+  days: propTypes.number,
+  tags: propTypes.array,
 };
 
 export default TripSummary;

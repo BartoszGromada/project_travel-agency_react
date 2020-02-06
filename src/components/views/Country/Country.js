@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 import Hero from '../../layout/Hero/Hero';
 import Section from '../../layout/Section/Section';
@@ -50,14 +50,14 @@ const Country = ({name, capital, region, subregion, currencies, population, trip
 );
 
 Country.propTypes = {
-  name: PropTypes.string,
-  flag: PropTypes.string,
-  capital: PropTypes.string,
-  region: PropTypes.string,
-  subregion: PropTypes.string,
-  currencies: PropTypes.array,
-  population: PropTypes.number,
-  trips: PropTypes.array,
+  name: propTypes.string,
+  flag: propTypes.string,
+  capital: propTypes.string,
+  region: propTypes.string,
+  subregion: propTypes.string,
+  currencies: propTypes.array,
+  population: propTypes.number,
+  trips: propTypes.array,
 };
 
 export default Country;

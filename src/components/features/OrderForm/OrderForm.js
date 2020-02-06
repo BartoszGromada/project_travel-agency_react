@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import {Row, Col} from 'react-flexbox-grid';
 import OrderSummary from '../OrderSummary/OrderSummary';
 import OrderOption from '../OrderOption/OrderOption';
@@ -24,9 +24,9 @@ class OrderForm extends React.Component {
 }
 
 OrderForm.propTypes = {
-  options: PropTypes.object,
-  tripCost: PropTypes.string,
-  setOrderOption: PropTypes.func,
+  options: propTypes.object,
+  tripCost: propTypes.string,
+  setOrderOption: propTypes.func,
 };
 
 export default OrderForm;

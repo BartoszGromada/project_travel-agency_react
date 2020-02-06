@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import Section from '../../layout/Section/Section';
 import CountrySummary from '../../features/CountrySummary/CountrySummary';
 import PageTitle from '../../common/PageTitle/PageTitle';
@@ -19,7 +19,7 @@ const Countries = ({countries}) => (
 );
 
 Countries.propTypes = {
-  countries: PropTypes.objectOf(PropTypes.object),
+  countries: propTypes.objectOf(propTypes.object),
 };
 
 export default Countries;

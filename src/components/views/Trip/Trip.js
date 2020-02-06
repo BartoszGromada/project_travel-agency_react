@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import HTMLParser from 'react-html-parser';
 
 import NotFound from '../NotFound/NotFound';
@@ -80,12 +80,12 @@ const Trip = ({error, name, image, cost, days, description, country, intro}) => 
 };
 
 Trip.propTypes = {
-  name: PropTypes.string,
-  image: PropTypes.string,
-  cost: PropTypes.string,
-  days: PropTypes.number,
-  description: PropTypes.string,
-  country: PropTypes.object,
+  name: propTypes.string,
+  image: propTypes.string,
+  cost: propTypes.string,
+  days: propTypes.number,
+  description: propTypes.string,
+  country: propTypes.object,
 };
 
 export default Trip;

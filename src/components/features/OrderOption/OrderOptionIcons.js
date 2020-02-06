@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styles from './OrderOption.scss';
 import {formatPrice} from '../../../utils/formatPrice';
 
@@ -29,10 +29,10 @@ const OrderOptionIcons = ({values, setOptionValue, required, currentValue}) => (
 );
 
 OrderOptionIcons.propTypes = {
-  values: PropTypes.array,
-  required: PropTypes.node,
-  currentValue: PropTypes.string,
-  setOptionValue: PropTypes.func,
+  values: propTypes.array,
+  required: propTypes.node,
+  currentValue: propTypes.string,
+  setOptionValue: propTypes.func,
 };
 
 export default OrderOptionIcons;

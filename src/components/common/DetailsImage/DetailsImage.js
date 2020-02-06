@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styles from './DetailsImage.scss';
 
 const DetailsImage = ({variant = '', children, ...otherProps}) => (
@@ -9,8 +9,8 @@ const DetailsImage = ({variant = '', children, ...otherProps}) => (
 );
 
 DetailsImage.propTypes = {
-  variant: PropTypes.string,
-  children: PropTypes.node,
+  variant: propTypes.string,
+  children: propTypes.node,
 };
 
 export default DetailsImage;

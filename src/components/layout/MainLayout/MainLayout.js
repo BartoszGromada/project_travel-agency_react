@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import Header from '../Header/Header';
 
 const MainLayout = ({children}) => (
@@ -12,7 +12,7 @@ const MainLayout = ({children}) => (
 );
 
 MainLayout.propTypes = {
-  children: PropTypes.node,
+  children: propTypes.node,
 };
 
 export default MainLayout;

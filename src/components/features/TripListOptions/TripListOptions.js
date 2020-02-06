@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import styles from './TripListOptions.scss';
 
 import {Row, Col} from 'react-flexbox-grid';
 
 class TripListOptions extends React.Component {
   handleTags(tag, checked) {
-    // TODO - use action dispatcher from props
     if(checked) {
       this.props.addTag(tag);
     } else {
@@ -91,15 +90,15 @@ class TripListOptions extends React.Component {
 }
 
 TripListOptions.propTypes = {
-  tags: PropTypes.object,
-  regions: PropTypes.object,
-  filters: PropTypes.object,
-  changeSearchPhrase: PropTypes.func,
-  changeDuration: PropTypes.func,
-  addTag: PropTypes.func,
-  removeTag: PropTypes.func,
-  addRegion: PropTypes.func,
-  removeRegion: PropTypes.func,
+  tags: propTypes.object,
+  regions: propTypes.object,
+  filters: propTypes.object,
+  changeSearchPhrase: propTypes.func,
+  changeDuration: propTypes.func,
+  addTag: propTypes.func,
+  removeTag: propTypes.func,
+  addRegion: propTypes.func,
+  removeRegion: propTypes.func,
 };
 
 export default TripListOptions;
