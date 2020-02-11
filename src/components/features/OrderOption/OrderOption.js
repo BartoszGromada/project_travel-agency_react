@@ -36,7 +36,7 @@ const OrderOption = ({name, type, id, setOrderOption, ...otherProps}) => {
 
 OrderOption.propTypes = {
   name: propTypes.string,
-  type: propTypes.object,
+  type: propTypes.string,
   id: propTypes.string,
   setOrderOption: propTypes.func,
 };

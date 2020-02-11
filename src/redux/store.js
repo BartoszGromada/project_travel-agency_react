@@ -24,6 +24,7 @@ const initialState = {
     trip: null,
     email: '',
     options: {},
+    startDate: new Date().toString(),
   },
 };
 

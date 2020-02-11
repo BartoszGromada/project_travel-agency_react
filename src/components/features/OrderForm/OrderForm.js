@@ -7,7 +7,8 @@ import pricing from '../../../data/pricing.json';
 
 class OrderForm extends React.Component {
   render() {
-    const {options, tripCost, setOrderOption} = this.props;
+    const {options, tripCost, days, setOrderOption} = this.props;
+    console.log('Wartości Domyślne: ',options);
     return (
       <Row>
         {pricing.map(option => (
@@ -16,7 +17,7 @@ class OrderForm extends React.Component {
           </Col>
         ))}
         <Col xs={12}>
-          <OrderSummary tripCost={tripCost} options={options}/>
+          <OrderSummary tripCost={tripCost} options={options} days={days}/>
         </Col>
       </Row>
     );
@@ -27,6 +28,7 @@ OrderForm.propTypes = {
   options: propTypes.object,
   tripCost: propTypes.string,
   setOrderOption: propTypes.func,
+  days: propTypes.number,
 };
 
 export default OrderForm;
