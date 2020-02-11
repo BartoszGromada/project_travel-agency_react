@@ -19,7 +19,7 @@ class OrderOptionDate extends React.Component {
           dateFormat="dd/MM/yyyy"
           minDate={addDays(new Date(), 14)}
         />
-        {`(Select a date min. 14 days from today)`}
+        {`(min. 14 days from today)`}
       </div>
     );
   }
