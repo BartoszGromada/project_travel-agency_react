@@ -1,5 +1,11 @@
+import {addDays} from '../utils/addDays';
+
 export const getOrder = ({order}) => order;
-export const getOrderOptions = ({order}) => order.options;
+export const getOrderOptions = ({order}) => {
+  order.options.startDate = addDays(new Date(), 14);
+  return order.options;
+};
+
 
 const reducerName = 'order';
 const createActionName = name => `app/${reducerName}/${name}`;
