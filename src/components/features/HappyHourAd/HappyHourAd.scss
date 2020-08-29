@@ -1,0 +1,26 @@
+@import "../../../styles/settings.scss";
+
+.title {
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  top: 85%;
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  color: $color-light-opacity;
+  transform: translate(-50%, -85%);
+}
+
+.promoDescription {
+    position: absolute;
+    z-index: 999;
+    left: 50%;
+    top: 95%;
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 400;
+    color: $color-light-opacity;
+    transform: translate(-50%, -95%);
+  }

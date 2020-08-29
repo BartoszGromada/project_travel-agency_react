@@ -86,6 +86,9 @@ for (let type in optionTypes) {
 
     /* common tests */
     it(`renders ${optionTypes[type]}`, () => {
+      /*if (type === 'date') {
+        subcomponent.setProps({currentValue: jest.fn()})
+      }*/
       expect(subcomponent).toBeTruthy();
       expect(subcomponent.length).toBe(1);
     });

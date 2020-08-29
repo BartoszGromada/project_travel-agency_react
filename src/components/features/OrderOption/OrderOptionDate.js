@@ -26,7 +26,10 @@ class OrderOptionDate extends React.Component {
 }
 
 OrderOptionDate.propTypes = {
-  currentValue: PropTypes.date,
+  currentValue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.instanceOf(Date),
+  ]),
   setOptionValue: PropTypes.func,
 };
 
